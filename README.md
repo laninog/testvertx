@@ -26,6 +26,12 @@ Open your browser [http://localhost:8081](http://localhost:8081)
 
 Open your browser [http://localhost:8082](http://localhost:8082)
 
+## Run all
+
+``` bash
+./mvnw compile exec:java -Pall
+```
+
 ## Package
 
 ``` bash
