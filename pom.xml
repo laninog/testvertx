@@ -201,25 +201,30 @@
 
         </profile>
 
+        <profile>
+            <id>all</id>
+            <build>
+
+                <plugins>
+
+                    <plugin>
+                        <groupId>org.codehaus.mojo</groupId>
+                        <artifactId>exec-maven-plugin</artifactId>
+                        <configuration>
+                            <mainClass>io.vertx.core.Launcher</mainClass>
+                            <arguments>
+                                <argument>run</argument>
+                                <argument>com.vertx.test.MainVerticle</argument>
+                            </arguments>
+                        </configuration>
+                    </plugin>
+
+                </plugins>
+
+            </build>
+
+        </profile>
+
     </profiles>
-
-    <!--
-To run with maven
-
-mvn compile exec:java
-To build a "fat jar"
-
-mvn package
-To run the fat jar:
-
-java -jar target/maven-simplest-3.5.0-fat.jar
-(You can take that jar and run it anywhere there is a Java 8+ JDK. It contains all the dependencies it needs so you don’t need to install Vert.x on the target machine).
-
-You can also run the fat jar with maven:
-
-mvn package exec:exec@run-app
-
-
-    -->
 
 </project>
